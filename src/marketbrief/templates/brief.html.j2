@@ -1,0 +1,221 @@
+{% macro claim_item(claim) -%}
+<li class="claim{% if claim.kind == 'analysis' %} claim-analysis{% endif %}" id="claim-{{ claim.id }}">
+  <span class="claim-text">{{ claim.text }}</span>
+  {%- for fn in footnotes(claim) -%}
+  <sup class="fn"><a href="#{{ fn.anchor }}" title="{{ fn.ref.source_name }}: {{ fn.ref.title }}">[{{ fn.number }}]</a></sup>
+  {%- endfor -%}
+  {%- if claim.verification == "weak" %} <span class="flag flag-weak">(weakly supported)</span>
+  {%- elif claim.verification == "unsupported" %} <span class="flag flag-bad">(unverified)</span>
+  {%- endif %}
+</li>
+{%- endmacro %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="marketbrief">
+<title>{{ brief.title }}</title>
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #1a2230;
+    --muted: #5a6574;
+    --rule: #dfe3e9;
+    --paper: #ffffff;
+    --ground: #f3f4f6;
+    --accent: #1d4a73;
+    --accent-soft: #edf3f9;
+    --ok: #1d6a3a; --ok-soft: #e4f3e9;
+    --warn: #8a5800; --warn-soft: #fdf3dc;
+    --bad: #9a1f1f; --bad-soft: #fbe7e7;
+    --sans: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--ground); }
+  body { margin: 0; padding: 32px 16px; color: var(--ink); font: 16px/1.62 var(--serif); }
+  .page { position: relative; max-width: 820px; margin: 0 auto; padding: 56px 64px 40px;
+          background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; }
+  .draft-banner { margin: -56px -64px 32px; padding: 10px 64px; background: var(--warn-soft);
+                  border-bottom: 1px solid #efd9a6; color: var(--warn); font: 600 13px/1.4 var(--sans); }
+  .watermark { position: fixed; top: 50%; left: 50%; z-index: 0; pointer-events: none; white-space: nowrap;
+               transform: translate(-50%, -50%) rotate(-28deg); font: 800 120px/1 var(--sans);
+               letter-spacing: .08em; color: rgba(154, 31, 31, .06); }
+  header, main, footer { position: relative; z-index: 1; }
+  .kicker { font: 600 12px/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  h1 { margin: 6px 0 14px; font: 700 31px/1.2 var(--serif); }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; font: 13px/1.5 var(--sans); color: var(--muted); }
+  .meta dt { display: inline; font-weight: 600; color: var(--ink); }
+  .meta dd { display: inline; margin: 0 0 0 4px; }
+  .badge { display: inline-block; padding: 1px 9px; border-radius: 999px; font: 600 11px/1.7 var(--sans);
+           letter-spacing: .05em; text-transform: uppercase; }
+  .badge-approved { background: var(--ok-soft); color: var(--ok); }
+  .badge-pending { background: var(--warn-soft); color: var(--warn); }
+  .badge-closed { background: var(--bad-soft); color: var(--bad); }
+  h2 { margin: 38px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+       font: 700 13px/1.4 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  h3 { margin: 24px 0 8px; font: 700 18px/1.35 var(--serif); }
+  ul.claims { margin: 0; padding-left: 20px; }
+  ul.claims li { margin: 0 0 10px; padding-left: 2px; }
+  .exec { margin-top: 28px; padding: 18px 24px 8px 26px; background: var(--accent-soft);
+          border-left: 4px solid var(--accent); border-radius: 0 4px 4px 0; }
+  .exec h2 { margin-top: 0; border-bottom: 0; padding-bottom: 0; }
+  .exec li { font-size: 17px; }
+  .claim-analysis .claim-text { font-style: italic; }
+  sup.fn { margin-left: 1px; font: 600 11px/0 var(--sans); }
+  sup.fn a { color: var(--accent); text-decoration: none; }
+  sup.fn a:hover { text-decoration: underline; }
+  .flag { font: italic 13px var(--sans); white-space: nowrap; }
+  .flag-weak { color: var(--warn); }
+  .flag-bad { color: var(--bad); }
+  .watchlist { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .watchlist li { padding: 3px 12px; border: 1px solid var(--rule); border-radius: 999px;
+                  font: 14px/1.5 var(--sans); background: #fafbfc; }
+  .continuity { margin: 0; padding: 0; list-style: none; }
+  .continuity li { margin: 0 0 12px; padding-left: 0; }
+  .relation { display: inline-block; min-width: 92px; margin-right: 8px; padding: 0 8px; border-radius: 3px;
+              text-align: center; font: 600 11px/1.9 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
+  .relation-continues { background: var(--accent-soft); color: var(--accent); }
+  .relation-updates { background: var(--ok-soft); color: var(--ok); }
+  .relation-contradicts { background: var(--bad-soft); color: var(--bad); }
+  .prior-id { font: 12px var(--sans); color: var(--muted); }
+  ol.sources { margin: 0; padding-left: 28px; font-size: 14px; line-height: 1.5; }
+  ol.sources li { margin: 0 0 8px; padding: 2px 4px; border-radius: 3px; scroll-margin-top: 16px; }
+  ol.sources li:target { background: #fff6d6; }
+  .src-meta { color: var(--muted); font-family: var(--sans); font-size: 13px; }
+  .src-url { word-break: break-all; font-family: var(--sans); font-size: 12px; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule);
+           font: 12px/1.6 var(--sans); color: var(--muted); }
+  footer code { font-size: 11px; }
+  @media (max-width: 640px) {
+    body { padding: 0; }
+    .page { padding: 28px 18px; border: 0; border-radius: 0; }
+    .draft-banner { margin: -28px -18px 24px; padding: 10px 18px; }
+    h1 { font-size: 25px; }
+    .watermark { font-size: 64px; }
+  }
+  @media print {
+    @page { margin: 18mm 16mm; }
+    html, body { background: #fff; padding: 0; }
+    body { font-size: 11pt; }
+    .page { max-width: none; padding: 0; border: 0; }
+    .draft-banner { margin: 0 0 18pt; padding: 6pt 0; background: none; border: 0; border-bottom: 1px solid #000; }
+    .exec { background: none; }
+    a { color: inherit; text-decoration: none; }
+    .src-url { color: #333; }
+    h2, h3 { break-after: avoid; }
+    li { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+{% if not is_approved %}
+<div class="watermark" aria-hidden="true">DRAFT</div>
+{% endif %}
+<article class="page">
+  {% if not is_approved %}
+  <div class="draft-banner" role="note">Draft — {{ status_label | lower }}. Not for client distribution until approved by a reviewer.</div>
+  {% endif %}
+  <header>
+    <div class="kicker">Market intelligence brief · {{ brief.topic }}</div>
+    <h1>{{ brief.title }}</h1>
+    <dl class="meta">
+      {% if period %}
+      <div><dt>Period</dt><dd>{{ period }}</dd></div>
+      {% endif %}
+      <div><dt>Status</dt><dd><span class="badge {{ 'badge-approved' if is_approved else ('badge-closed' if brief.status == 'rejected' else 'badge-pending') }}">{{ status_label }}</span></dd></div>
+      <div><dt>Sources</dt><dd>{{ sources | length }}</dd></div>
+      {% if brief.review %}
+      <div><dt>Reviewed</dt><dd>{{ brief.review.reviewer }}, {{ brief.review.decided_at | date }}</dd></div>
+      {% endif %}
+    </dl>
+  </header>
+
+  <main>
+    <section class="exec" aria-labelledby="h-exec">
+      <h2 id="h-exec">Executive summary</h2>
+      <ul class="claims">
+        {% for claim in brief.executive_summary %}
+        {{ claim_item(claim) }}
+        {% endfor %}
+      </ul>
+    </section>
+
+    {% if brief.sections %}
+    <section aria-labelledby="h-dev">
+      <h2 id="h-dev">Key developments</h2>
+      {% for section in brief.sections %}
+      <h3>{{ section.title }}</h3>
+      <ul class="claims">
+        {% for claim in section.claims %}
+        {{ claim_item(claim) }}
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if brief.implications %}
+    <section aria-labelledby="h-impl">
+      <h2 id="h-impl">Strategic implications</h2>
+      <ul class="claims">
+        {% for claim in brief.implications %}
+        {{ claim_item(claim) }}
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if brief.watchlist %}
+    <section aria-labelledby="h-watch">
+      <h2 id="h-watch">Watchlist</h2>
+      <ul class="watchlist">
+        {% for item in brief.watchlist %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if brief.continuity or brief.continuity_text %}
+    <section aria-labelledby="h-cont">
+      <h2 id="h-cont">Continuity with prior briefs</h2>
+      <ul class="continuity">
+        {% if brief.continuity %}
+        {% for note in brief.continuity %}
+        <li><span class="relation relation-{{ note.relation }}">{{ relation_labels[note.relation] }}</span>{{ note.note | strip_relation }} <span class="prior-id">({{ note.prior_brief_id }})</span></li>
+        {% endfor %}
+        {% else %}
+        {% for line in brief.continuity_text %}
+        <li>{{ line }}</li>
+        {% endfor %}
+        {% endif %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <section aria-labelledby="h-src">
+      <h2 id="h-src">Sources</h2>
+      <ol class="sources">
+        {% for entry in sources %}
+        <li id="{{ entry.anchor }}">
+          {% if entry.ref.url %}<a href="{{ entry.ref.url }}" rel="noopener noreferrer">{{ entry.ref.title }}</a>{% else %}{{ entry.ref.title }}{% endif %}
+          <span class="src-meta"> — {{ entry.ref.source_name }}{% if entry.ref.published_at %}, {{ entry.ref.published_at | date }}{% endif %}{% if entry.ref.corroborating_sources %}. Also reported by {{ entry.ref.corroborating_sources | join(", ") }}{% endif %}.</span>
+          {% if entry.ref.url %}<div class="src-url">{{ entry.ref.url }}</div>{% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    {% if validation %}
+    <p>Verification: every factual statement is linked to the sources it draws on. {{ validation.claims_checked }} claims were checked automatically for source support and number consistency — {{ validation.supported }} supported, {{ validation.weak }} weakly supported, {{ validation.unsupported }} unsupported{% if validation.fact_checked %}, followed by an independent fact-check pass{% endif %}.</p>
+    {% endif %}
+    <p>Brief <code>{{ brief.id }}</code>{% if brief.run_id %} · run <code>{{ brief.run_id }}</code>{% endif %}{% if brief.prompt_version %} · prompts <code>{{ brief.prompt_version }}</code>{% endif %} · generated {{ brief.created_at | date("%d %b %Y %H:%M UTC") }} by marketbrief.</p>
+  </footer>
+</article>
+</body>
+</html>

@@ -1,0 +1,255 @@
+{
+  "id": "b_20260930_prior1",
+  "topic": "Enterprise AI infrastructure",
+  "title": "Enterprise AI infrastructure: September 2026",
+  "created_at": "2026-09-30T18:00:00Z",
+  "period_start": "2026-09-01T00:00:00Z",
+  "period_end": "2026-09-30T23:59:59Z",
+  "executive_summary": [
+    {
+      "id": "c1",
+      "text": "Specialist GPU clouds including Northwind Compute faced mounting pricing pressure in September as new accelerator supply came online, and analysts expect a GPU price war before year-end.",
+      "citations": [
+        "a_5e1f0c9a7b21",
+        "a_0f9e8d7c6b5a"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    },
+    {
+      "id": "c2",
+      "text": "Meridian Cloud was reported to be in talks to buy observability company Vireo Analytics for more than $1 billion.",
+      "citations": [
+        "a_8c3d2e4f6a10"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    },
+    {
+      "id": "c3",
+      "text": "Aurora Silicon was reported to be in fundraising talks for about $400 million to scale production of its A9 inference chip.",
+      "citations": [
+        "a_2b7e9d1c4f38"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    },
+    {
+      "id": "c4",
+      "text": "European officials signalled closer scrutiny of cloud data egress fees after complaints from software trade groups.",
+      "citations": [
+        "a_d4a6b8c0e2f1"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    }
+  ],
+  "sections": [
+    {
+      "title": "Pricing & competition",
+      "claims": [
+        {
+          "id": "c5",
+          "text": "Northwind Compute began discounting reserved H-class GPU capacity for customers signing contracts of 12 months or more.",
+          "citations": [
+            "a_5e1f0c9a7b21"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        },
+        {
+          "id": "c6",
+          "text": "Spot rental rates for high-end GPUs on secondary marketplaces fell by roughly 25% between June and September.",
+          "citations": [
+            "a_0f9e8d7c6b5a"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        }
+      ]
+    },
+    {
+      "title": "Funding & M&A",
+      "claims": [
+        {
+          "id": "c7",
+          "text": "Meridian Cloud was reported to be in talks to buy Vireo Analytics for more than $1 billion to add multi-cloud observability tools.",
+          "citations": [
+            "a_8c3d2e4f6a10"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        },
+        {
+          "id": "c8",
+          "text": "Aurora Silicon was reported to be in fundraising talks for about $400 million, with Calder Peak Capital expected to lead.",
+          "citations": [
+            "a_2b7e9d1c4f38"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        }
+      ]
+    },
+    {
+      "title": "Regulatory & legal",
+      "claims": [
+        {
+          "id": "c9",
+          "text": "European officials signalled closer scrutiny of cloud data egress fees, with Meridian Cloud among the providers named in trade-group complaints.",
+          "citations": [
+            "a_d4a6b8c0e2f1"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        }
+      ]
+    },
+    {
+      "title": "Products & partnerships",
+      "claims": [
+        {
+          "id": "c10",
+          "text": "LumenForge AI said its next-generation model, expected in October, would include an option to run on customers' own servers.",
+          "citations": [
+            "a_7a1b2c3d4e5f"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        }
+      ]
+    }
+  ],
+  "implications": [
+    {
+      "id": "c11",
+      "text": "A GPU price war would squeeze specialist cloud margins and favour buyers who keep commitments short and portable.",
+      "citations": [
+        "a_5e1f0c9a7b21",
+        "a_0f9e8d7c6b5a"
+      ],
+      "kind": "analysis",
+      "verification": "supported",
+      "support_score": null
+    },
+    {
+      "id": "c12",
+      "text": "If Meridian Cloud buys Vireo Analytics, rival clouds may restrict the telemetry available to Vireo's monitoring tools.",
+      "citations": [
+        "a_8c3d2e4f6a10"
+      ],
+      "kind": "analysis",
+      "verification": "supported",
+      "support_score": null
+    },
+    {
+      "id": "c13",
+      "text": "Formal EU action on egress fees would weaken a key switching barrier for hyperscale clouds such as Meridian Cloud.",
+      "citations": [
+        "a_d4a6b8c0e2f1"
+      ],
+      "kind": "analysis",
+      "verification": "supported",
+      "support_score": null
+    }
+  ],
+  "watchlist": [
+    "Northwind Compute",
+    "Meridian Cloud",
+    "Vireo Analytics",
+    "Aurora Silicon",
+    "EU review of cloud egress fees",
+    "LumenForge AI next-generation model"
+  ],
+  "continuity": [
+    {
+      "prior_brief_id": "b_20260916_prior0",
+      "prior_claim": "Rapid GPU fleet growth at specialist clouds such as Northwind Compute raises the risk of excess capacity and falling rental prices later in the year.",
+      "relation": "continues",
+      "note": "Continues: pricing pressure on specialist GPU clouds flagged in mid-September has started to show up in discounts and spot rates."
+    }
+  ],
+  "continuity_text": [
+    "Continues: pricing pressure on specialist GPU clouds flagged in mid-September has started to show up in discounts and spot rates."
+  ],
+  "sources": [
+    {
+      "article_id": "a_5e1f0c9a7b21",
+      "title": "Northwind Compute discounts reserved GPU capacity as supply loosens",
+      "url": "https://www.datacenterdispatch.example/news/2026/09/18/northwind-reserved-discounts",
+      "source_name": "Datacenter Dispatch",
+      "published_at": "2026-09-18T12:00:00Z",
+      "corroborating_sources": [
+        "InfraWeekly"
+      ]
+    },
+    {
+      "article_id": "a_0f9e8d7c6b5a",
+      "title": "GPU spot rates slide as new supply lands",
+      "url": "https://cloudledger.example/articles/2026/09/22/gpu-spot-rates-slide",
+      "source_name": "Cloud Ledger",
+      "published_at": "2026-09-22T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_8c3d2e4f6a10",
+      "title": "Meridian Cloud in talks to buy Vireo Analytics, sources say",
+      "url": "https://marketpulsedaily.example/markets/2026/09/24/meridian-vireo-talks",
+      "source_name": "Market Pulse Daily",
+      "published_at": "2026-09-24T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_2b7e9d1c4f38",
+      "title": "Aurora Silicon in talks to raise about $400 million",
+      "url": "https://www.siliconwire.example/stories/2026/09/25/aurora-fundraising-talks",
+      "source_name": "The Silicon Wire",
+      "published_at": "2026-09-25T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_d4a6b8c0e2f1",
+      "title": "Software groups press EU over cloud egress fees",
+      "url": "https://marketpulsedaily.example/markets/2026/09/26/eu-egress-fee-complaints",
+      "source_name": "Market Pulse Daily",
+      "published_at": "2026-09-26T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_7a1b2c3d4e5f",
+      "title": "LumenForge AI teases on-premises option for next model",
+      "url": "https://www.siliconwire.example/stories/2026/09/29/lumenforge-next-model-preview",
+      "source_name": "The Silicon Wire",
+      "published_at": "2026-09-29T12:00:00Z",
+      "corroborating_sources": []
+    }
+  ],
+  "status": "approved",
+  "validation": {
+    "passed": true,
+    "claims_checked": 13,
+    "supported": 13,
+    "weak": 0,
+    "unsupported": 0,
+    "issues": [],
+    "fact_checked": true
+  },
+  "review": {
+    "decision": "approved",
+    "reviewer": "j.ellison (editor)",
+    "notes": "Synthetic seed brief for the demo.",
+    "decided_at": "2026-09-30T19:10:00Z"
+  },
+  "prompt_version": "seed",
+  "run_id": "r_20260930170000_seed"
+}

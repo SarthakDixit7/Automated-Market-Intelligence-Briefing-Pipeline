@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marketbrief"
+version = "0.1.0"
+description = "Automated market-intelligence briefing pipeline: news ingestion -> typed extraction -> map-reduce briefs with citation validation, RAG continuity, an analyst agent, and evals."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "anthropic>=2.0",
+    "pydantic>=2.7",
+    "numpy>=1.26",
+    "feedparser>=6.0",
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+    "jinja2>=3.1",
+    "matplotlib>=3.8",
+    "typer>=0.12",
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+embeddings = ["sentence-transformers>=3"]
+
+[project.scripts]
+marketbrief = "marketbrief.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+marketbrief = ["templates/*.j2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

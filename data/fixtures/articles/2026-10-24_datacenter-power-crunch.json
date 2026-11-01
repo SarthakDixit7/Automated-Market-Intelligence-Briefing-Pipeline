@@ -1,0 +1,9 @@
+{
+  "title": "Power crunch pushes data centre builders toward smaller, distributed sites",
+  "url": "https://www.datacenterdispatch.example/news/2026/10/24/datacenter-power-crunch",
+  "source": "Datacenter Dispatch",
+  "published_at": "2026-10-24T09:00:00Z",
+  "author": "Rafael Lindgren",
+  "text": "Developers of AI data centres are increasingly splitting projects into several mid-sized sites rather than one giant campus, as waits for large grid connections stretch past four years in parts of the United States and Europe.\n\nThree developers interviewed by Datacenter Dispatch said they now plan around sites of 50 to 150 megawatts that can be connected to existing substations, instead of campuses above 500 megawatts that need new transmission lines.\n\nThe shift has knock-on effects. Training very large models across several sites requires faster links between them, a challenge that networking vendors including Kestrel Networks are trying to address. Operators such as Meridian Cloud and Northwind Compute have also begun scheduling some training jobs around local electricity prices.\n\n\"Power is now the first question in every site meeting, before land and before fibre,\" said Carla Mendes, a development director at a European data centre operator.\n\nUtilities, for their part, are asking large users to commit to flexible demand agreements that let the grid curtail consumption during peak periods. None of the developers expected the constraint to ease before 2028.",
+  "synthetic": true
+}

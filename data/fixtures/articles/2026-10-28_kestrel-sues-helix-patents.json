@@ -1,0 +1,9 @@
+{
+  "title": "Kestrel Networks sues Helix Data Systems over patent infringement",
+  "url": "https://cloudledger.example/articles/2026/10/28/kestrel-sues-helix-patents",
+  "source": "Cloud Ledger",
+  "published_at": "2026-10-28T16:00:00Z",
+  "author": "Daniel Osei",
+  "text": "Kestrel Networks sues Helix Data Systems for patent infringement in a lawsuit filed on Tuesday in federal court in Delaware, alleging that Helix's data replication software copies four Kestrel inventions and seeking $85 million in damages.\n\nThe complaint says Helix's cross-region replication feature uses methods Kestrel developed for compressing and prioritising traffic between data centres. Kestrel licenses the techniques to several storage vendors, according to the filing.\n\nHelix Data Systems said the claims were without merit. \"We built our replication engine ourselves and will defend it vigorously,\" a spokesperson said.\n\nThe case adds to a difficult month for Kestrel, which announced plans a week ago to reduce its staff by 9%. Analysts said the suit could be an attempt to turn the company's intellectual property into a steadier source of income while hardware orders are uneven.\n\nFor Helix, the timing is awkward. The company is preparing to roll out LF-3 features from its LumenForge AI tie-up to customers in December, and a prolonged legal fight could distract its engineering teams. Neither company would say whether settlement talks had taken place.",
+  "synthetic": true
+}

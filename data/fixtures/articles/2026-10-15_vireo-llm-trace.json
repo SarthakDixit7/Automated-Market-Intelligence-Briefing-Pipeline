@@ -1,0 +1,9 @@
+{
+  "title": "Vireo Analytics unveils LLM tracing as Meridian deal awaits close",
+  "url": "https://www.siliconwire.example/stories/2026/10/15/vireo-llm-trace",
+  "source": "The Silicon Wire",
+  "published_at": "2026-10-15T10:30:00Z",
+  "author": "Jonah Whitfield",
+  "text": "Vireo Analytics has unveiled LLM Trace, a module that records every prompt, model response and token bill flowing through an application, and said it will remain available on all major clouds while its sale to Meridian Cloud is pending.\n\nThe module tags each model call with its cost and latency and flags responses that drift from expected formats, a problem that engineering teams say has become harder to spot as applications chain several models together.\n\n\"Teams are shipping AI features faster than they can monitor them,\" said Owen Brandt, Vireo's co-founder. \"Trace is meant to make a model call as observable as a database query.\"\n\nVireo said more than 300 customers had used the module during a three-month beta. It costs $0.40 per 1,000 traced calls.\n\nThe announcement is Vireo's first since agreeing to its $1.2 billion sale last week. Brandt said product plans had not changed and that the module would support models from any provider.",
+  "synthetic": true
+}

@@ -1,0 +1,9 @@
+{
+  "title": "LumenForge AI unveils LF-3, offers on-prem deployment",
+  "url": "https://infraweekly.example/briefing/2026/10/12/lumenforge-lf3-wire-copy",
+  "source": "InfraWeekly",
+  "published_at": "2026-10-12T17:30:00Z",
+  "author": "Wire copy",
+  "text": "LumenForge AI announced the launch of LF-3, its third-generation foundation model, with an on-premises deployment option that lets regulated customers run it entirely inside their own data centres.\n\nThe San Francisco company said LF-3 scores 18% higher than its predecessor on its internal reasoning benchmarks while needing about 40% less memory to serve, which allows the largest version to run on a single eight-accelerator server.\n\nOn-premises licences will be sold per server per year, alongside the existing hosted API. LumenForge said banks, insurers and two European government agencies had tested the model during a private preview.\n\n\"For a lot of enterprises the question was never whether the model was good enough. It was whether their data could leave the building,\" said Ines Moreau, LumenForge AI's head of product. \"With LF-3 it doesn't have to.\"\n\nThe company also said LF-3 supports a context window of 1 million tokens and ships with tooling for fine-tuning on customer data without sending it to LumenForge.\n\nAnalysts said the on-premises option puts LumenForge in more direct competition with open-weight models that enterprises already host themselves, and could win business in sectors that have stayed on the sidelines of generative AI.",
+  "synthetic": true
+}

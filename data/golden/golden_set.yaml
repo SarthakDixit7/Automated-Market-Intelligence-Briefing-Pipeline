@@ -1,0 +1,95 @@
+# Golden set: market events every brief for the synthetic October 2026 demo
+# feed (data/fixtures/articles) must catch. Scored by marketbrief.eval.golden.
+#
+# Matching rules:
+#   extraction - an extracted event with the same event_type, >=1 of the
+#                companies (case-insensitive, alias-tolerant) and, when
+#                keywords are listed, >=1 keyword in its headline/evidence.
+#   brief      - a fact claim naming >=1 company plus a keyword or an
+#                event-type synonym.
+# must_catch: false events count towards recall but never fail the eval alone.
+
+events:
+  - id: G1
+    description: Aurora Silicon raises $410 million Series D (2026-10-06)
+    event_type: funding
+    companies: [Aurora Silicon]
+    keywords: ["Series D", "410"]
+    must_catch: true
+
+  - id: G2
+    description: Meridian Cloud agrees to acquire Vireo Analytics for $1.2 billion (2026-10-08)
+    event_type: m_and_a
+    companies: [Meridian Cloud, Vireo Analytics]
+    keywords: ["1.2 billion", "$1.2B", "acquire", "acquisition", "Vireo"]
+    must_catch: true
+
+  - id: G3
+    description: Northwind Compute cuts H-class GPU-hour pricing by 22% (2026-10-09)
+    event_type: pricing
+    companies: [Northwind Compute]
+    keywords: ["22%", "GPU-hour", "price cut", "pricing"]
+    must_catch: true
+
+  - id: G4
+    description: LumenForge AI launches the LF-3 model with on-premises deployment (2026-10-12)
+    event_type: product_launch
+    companies: [LumenForge AI]
+    keywords: ["LF-3", "on-premises"]
+    must_catch: true
+
+  - id: G5
+    description: Helix Data Systems partners with LumenForge AI to embed LF-3 (2026-10-14)
+    event_type: partnership
+    companies: [Helix Data Systems, LumenForge AI]
+    keywords: ["LF-3", "partner", "partnership", "embed"]
+    must_catch: true
+
+  - id: G6
+    description: European Commission opens an inquiry into Meridian Cloud data egress fees (2026-10-16)
+    event_type: regulatory
+    companies: [Meridian Cloud]
+    keywords: ["egress", "inquiry", "European Commission"]
+    must_catch: true
+
+  - id: G7
+    description: Bastion Labs appoints former Meridian Cloud executive Dana Okafor as CEO (2026-10-19)
+    event_type: leadership
+    companies: [Bastion Labs]
+    keywords: ["Dana Okafor", "Okafor", "CEO", "chief executive"]
+    must_catch: true
+
+  - id: G8
+    description: Kestrel Networks cuts 9% of its workforce (2026-10-21)
+    event_type: layoffs
+    companies: [Kestrel Networks]
+    keywords: ["9%", "workforce", "layoffs"]
+    must_catch: true
+
+  - id: G9
+    description: Northwind Compute reports Q3 revenue up 48% to $312 million (2026-10-23)
+    event_type: earnings
+    companies: [Northwind Compute]
+    keywords: ["312", "48%", "Q3", "third quarter"]
+    must_catch: true
+
+  - id: G10
+    description: Aurora Silicon opens a design centre in Bengaluru with 300 engineers (2026-10-26)
+    event_type: expansion
+    companies: [Aurora Silicon]
+    keywords: ["Bengaluru", "design centre", "design center", "300 engineers"]
+    must_catch: false
+
+  - id: G11
+    description: Kestrel Networks sues Helix Data Systems over patent infringement (2026-10-28)
+    event_type: litigation
+    companies: [Kestrel Networks, Helix Data Systems]
+    keywords: ["patent", "infringement", "sues", "lawsuit"]
+    must_catch: true
+
+  - id: G12
+    description: Meridian Cloud launches a sovereign cloud region in Frankfurt (2026-10-29)
+    event_type: expansion
+    companies: [Meridian Cloud]
+    keywords: ["Frankfurt", "sovereign"]
+    must_catch: false

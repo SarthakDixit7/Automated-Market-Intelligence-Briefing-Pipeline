@@ -1,0 +1,9 @@
+{
+  "title": "Aurora Silicon raises $410 million Series D to scale inference chips",
+  "url": "https://www.siliconwire.example/stories/2026/10/06/aurora-silicon-series-d",
+  "source": "The Silicon Wire",
+  "published_at": "2026-10-06T12:30:00Z",
+  "author": "Maya Castellanos",
+  "text": "Aurora Silicon raises $410 million in a Series D funding round led by Calder Peak Capital, the AI chip designer said on Tuesday, valuing the company at about $3.1 billion.\n\nThe Austin-based startup, which designs low-power accelerators for running trained models rather than training them, said the new capital will pay for volume production of its A9 inference chip and roughly double its engineering headcount over the next 18 months.\n\nExisting investors Northgate Ventures and Halcyon Capital also took part in the round. Aurora Silicon has now secured about $720 million from investors since it was founded in 2021.\n\n\"Inference is where the money is going to be spent for the rest of the decade,\" said co-founder Lena Varga. \"Customers want chips that cut their cost per token, not just chips that top a benchmark.\"\n\nThe company said A9 samples are already in testing with three cloud providers, which it did not identify, and that it expects first production shipments in the middle of 2027.\n\nAurora Silicon competes with much larger chipmakers as well as a crowded field of venture-backed startups. Investors have poured money into inference-focused designs this year as enterprises move AI models from pilots into production.",
+  "synthetic": true
+}

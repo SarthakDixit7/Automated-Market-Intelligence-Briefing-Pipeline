@@ -1,0 +1,9 @@
+{
+  "title": "Northwind Compute cuts H-class GPU-hour pricing by 22%",
+  "url": "https://www.datacenterdispatch.example/news/2026/10/09/northwind-gpu-price-cut",
+  "source": "Datacenter Dispatch",
+  "published_at": "2026-10-09T11:00:00Z",
+  "author": "Rafael Lindgren",
+  "text": "Northwind Compute is cutting on-demand pricing for its H-class GPU instances by 22%, bringing the list rate to $2.15 per GPU-hour from November 1, the GPU cloud provider said on Friday.\n\nThe reduction applies in all of Northwind's regions and to both single-node and cluster reservations of up to 512 accelerators. Committed-use contracts signed in the past 90 days will be repriced automatically, the company said.\n\n\"Capacity that was scarce a year ago is now available, and we want customers building on Northwind rather than waiting in someone else's queue,\" said Marcus Hale, the company's co-founder.\n\nThe move is the deepest list-price reduction by a major GPU cloud this year and comes as new supply from several chip vendors reaches data centres. Industry watchers have warned for months that falling rental rates could turn into a broader price war among specialist GPU clouds.\n\nNorthwind, which operates about 85,000 accelerators across nine data centres, said utilisation remained above 80% and that the cut was paid for by lower hardware and power costs rather than by sacrificing margin. Rivals did not immediately respond to requests for comment.",
+  "synthetic": true
+}

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.env
+data/cache/
+data/raw/
+data/store/
+data/runs/
+data/review/
+data/briefs/
+data/index/
+data/evals/
+data/agent/
+output/

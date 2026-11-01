@@ -1,0 +1,36 @@
+# Entity gazetteer for the synthetic demo market (all companies are fictional).
+# name: canonical company name used in records and briefs
+# aliases: other spellings that refer to the same company
+# category: market category (lowercase) attached to extracted records
+companies:
+  - name: Northwind Compute
+    aliases: [Northwind]
+    category: gpu cloud
+
+  - name: Helix Data Systems
+    aliases: [Helix Data, Helix]
+    category: data platform
+
+  - name: Aurora Silicon
+    aliases: [Aurora]
+    category: ai chips
+
+  - name: Meridian Cloud
+    aliases: [Meridian]
+    category: hyperscale cloud
+
+  - name: LumenForge AI
+    aliases: [LumenForge]
+    category: foundation models
+
+  - name: Bastion Labs
+    aliases: [Bastion]
+    category: ai security
+
+  - name: Vireo Analytics
+    aliases: [Vireo]
+    category: observability
+
+  - name: Kestrel Networks
+    aliases: [Kestrel]
+    category: datacenter networking

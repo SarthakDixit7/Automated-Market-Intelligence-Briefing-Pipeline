@@ -1,0 +1,176 @@
+{
+  "id": "b_20260916_prior0",
+  "topic": "Enterprise AI infrastructure",
+  "title": "Enterprise AI infrastructure: 1-15 September 2026",
+  "created_at": "2026-09-16T07:30:00Z",
+  "period_start": "2026-09-01T00:00:00Z",
+  "period_end": "2026-09-15T23:59:59Z",
+  "executive_summary": [
+    {
+      "id": "c1",
+      "text": "Northwind Compute added 12,000 H-class GPUs across two new data centres, lifting its fleet to about 85,000 accelerators.",
+      "citations": [
+        "a_51a7c9e3d2b8"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    },
+    {
+      "id": "c2",
+      "text": "Bastion Labs began searching for a new chief executive with enterprise sales experience, according to people familiar with the matter.",
+      "citations": [
+        "a_9b4d2f6e1a07"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    },
+    {
+      "id": "c3",
+      "text": "Kestrel Networks said its next-generation 800G switch is on track for an October announcement.",
+      "citations": [
+        "a_3c8e1a5f7d92"
+      ],
+      "kind": "fact",
+      "verification": "supported",
+      "support_score": 0.6
+    }
+  ],
+  "sections": [
+    {
+      "title": "Products & partnerships",
+      "claims": [
+        {
+          "id": "c4",
+          "text": "Kestrel Networks said its next-generation 800G switch is on track for an October announcement, targeting AI training clusters.",
+          "citations": [
+            "a_3c8e1a5f7d92"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        },
+        {
+          "id": "c5",
+          "text": "Helix Data Systems said it was evaluating foundation model providers to embed generative AI features in its data platform.",
+          "citations": [
+            "a_e7c1d3b5a9f2"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        }
+      ]
+    },
+    {
+      "title": "People & operations",
+      "claims": [
+        {
+          "id": "c6",
+          "text": "Bastion Labs began searching for a new chief executive with enterprise sales experience, according to people familiar with the matter.",
+          "citations": [
+            "a_9b4d2f6e1a07"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        },
+        {
+          "id": "c7",
+          "text": "Northwind Compute added 12,000 H-class GPUs across two new data centres, lifting its fleet to about 85,000 accelerators.",
+          "citations": [
+            "a_51a7c9e3d2b8"
+          ],
+          "kind": "fact",
+          "verification": "supported",
+          "support_score": 0.6
+        }
+      ]
+    }
+  ],
+  "implications": [
+    {
+      "id": "c8",
+      "text": "Rapid GPU fleet growth at specialist clouds such as Northwind Compute raises the risk of excess capacity and falling rental prices later in the year.",
+      "citations": [
+        "a_51a7c9e3d2b8"
+      ],
+      "kind": "analysis",
+      "verification": "supported",
+      "support_score": null
+    },
+    {
+      "id": "c9",
+      "text": "Helix Data Systems choosing a model provider would signal which foundation model vendors are winning enterprise distribution.",
+      "citations": [
+        "a_e7c1d3b5a9f2"
+      ],
+      "kind": "analysis",
+      "verification": "supported",
+      "support_score": null
+    }
+  ],
+  "watchlist": [
+    "Bastion Labs leadership search",
+    "Kestrel Networks 800G switch",
+    "Helix Data Systems model provider choice",
+    "Northwind Compute"
+  ],
+  "continuity": [],
+  "continuity_text": [],
+  "sources": [
+    {
+      "article_id": "a_3c8e1a5f7d92",
+      "title": "Kestrel Networks sets October date for 800G switch",
+      "url": "https://www.siliconwire.example/stories/2026/09/04/kestrel-800g-timeline",
+      "source_name": "The Silicon Wire",
+      "published_at": "2026-09-04T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_9b4d2f6e1a07",
+      "title": "Bastion Labs quietly hunts for enterprise-savvy chief executive",
+      "url": "https://infraweekly.example/briefing/2026/09/09/bastion-leadership-search",
+      "source_name": "InfraWeekly",
+      "published_at": "2026-09-09T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_e7c1d3b5a9f2",
+      "title": "Helix Data Systems weighs foundation model options",
+      "url": "https://cloudledger.example/articles/2026/09/11/helix-model-evaluation",
+      "source_name": "Cloud Ledger",
+      "published_at": "2026-09-11T12:00:00Z",
+      "corroborating_sources": []
+    },
+    {
+      "article_id": "a_51a7c9e3d2b8",
+      "title": "Northwind Compute adds 12,000 GPUs in two new data centres",
+      "url": "https://www.datacenterdispatch.example/news/2026/09/14/northwind-fleet-expansion",
+      "source_name": "Datacenter Dispatch",
+      "published_at": "2026-09-14T12:00:00Z",
+      "corroborating_sources": [
+        "InfraWeekly"
+      ]
+    }
+  ],
+  "status": "approved",
+  "validation": {
+    "passed": true,
+    "claims_checked": 9,
+    "supported": 9,
+    "weak": 0,
+    "unsupported": 0,
+    "issues": [],
+    "fact_checked": true
+  },
+  "review": {
+    "decision": "approved",
+    "reviewer": "j.ellison (editor)",
+    "notes": "Synthetic seed brief for the demo.",
+    "decided_at": "2026-09-16T09:05:00Z"
+  },
+  "prompt_version": "seed",
+  "run_id": "r_20260916070000_seed"
+}

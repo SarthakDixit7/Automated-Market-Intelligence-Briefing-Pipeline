@@ -1,0 +1,9 @@
+{
+  "title": "Kestrel Networks unveils 800G fabric switch aimed at AI training clusters",
+  "url": "https://www.siliconwire.example/stories/2026/10/05/kestrel-800g-fabric-switch",
+  "source": "The Silicon Wire",
+  "published_at": "2026-10-05T14:20:00Z",
+  "author": "Jonah Whitfield",
+  "text": "Kestrel Networks has unveiled the Talon 8, an 800-gigabit Ethernet switch built for the east-west traffic that dominates large AI training clusters, with general availability planned for the first half of 2027.\n\nThe San Jose company said the Talon 8 packs 64 ports of 800G into a single rack unit and reduces tail latency by roughly 30% compared with its previous generation, a gain it attributes to deeper on-chip buffers and a revised congestion-control scheme.\n\n\"Training jobs now stall on the network long before they stall on compute,\" said Priya Raman, Kestrel's vice-president of product. \"Talon 8 is designed so a 30,000-accelerator cluster behaves like one machine.\"\n\nKestrel did not disclose list prices. Two early-access customers, which the company declined to identify, are running the switch in pilot deployments.\n\nAnalysts said the timing matters. Rivals are racing to ship comparable hardware, and hyperscale buyers have signalled that they will standardise on one or two fabric vendors for their next build-outs. Kestrel shares rose 3% in morning trading.",
+  "synthetic": true
+}

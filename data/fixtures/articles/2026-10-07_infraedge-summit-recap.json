@@ -1,0 +1,9 @@
+{
+  "title": "InfraEdge Summit recap: power, not chips, dominated the hallway talk",
+  "url": "https://infraweekly.example/briefing/2026/10/07/infraedge-summit-recap",
+  "source": "InfraWeekly",
+  "published_at": "2026-10-07T18:00:00Z",
+  "author": "Sofia Brennan",
+  "text": "If one theme ran through three days of the InfraEdge Summit in Las Vegas, it was electricity. Session after session returned to the same constraint: grid connections for new data halls now take three to five years in many markets, and operators are scrambling for alternatives.\n\nSpeakers from Meridian Cloud and Northwind Compute described on-site gas turbines and long-term nuclear power agreements as stopgaps rather than strategy. A Kestrel Networks engineer argued that better network utilisation could free up 10% to 15% of stranded capacity in existing clusters.\n\nLiquid cooling was the other recurring topic. Vendors on the show floor demonstrated rear-door heat exchangers and direct-to-chip loops, and several attendees said retrofits of older halls were now routine rather than experimental.\n\nThere was less talk of models than at last year's event. \"Nobody here is debating whether demand is real,\" said one colocation executive. \"We are debating where to plug it in.\"\n\nBastion Labs drew a standing-room crowd for a session on securing model weights in multi-tenant clusters, a sign that security teams are now involved in infrastructure planning from the start. The summit returns to Las Vegas next October.",
+  "synthetic": true
+}

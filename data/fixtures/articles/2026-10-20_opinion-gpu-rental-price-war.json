@@ -1,0 +1,9 @@
+{
+  "title": "Opinion: The GPU rental price war is good for buyers, for now",
+  "url": "https://cloudledger.example/articles/2026/10/20/opinion-gpu-rental-price-war",
+  "source": "Cloud Ledger",
+  "published_at": "2026-10-20T07:00:00Z",
+  "author": "Elliot Marsh",
+  "text": "For two years, renting a high-end accelerator felt like booking a hotel during a sold-out convention. That era is ending, and enterprise buyers should enjoy it while it lasts.\n\nNorthwind Compute's 22% list-price cut earlier this month was the loudest signal, but it was not the first. Smaller GPU clouds have been quietly discounting reserved capacity since the summer, and spot rates on some secondary marketplaces have fallen by a third.\n\nThe reason is simple: supply caught up. New chips from established vendors and challengers such as Aurora Silicon are reaching data centres, and the clusters ordered in the panic of 2024 and 2025 are now online.\n\nCheaper compute is not free money, though. Specialist clouds borrowed heavily to buy hardware, and their margins depend on keeping utilisation high. If rates keep falling, expect consolidation, and expect the survivors to push long contracts that lock in today's prices for years.\n\nMy advice to buyers is to keep commitments short and portable. Insist on clear exit terms, and remember that the cheapest hour of compute is still the one you do not need to buy.",
+  "synthetic": true
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Aurora Silicon lands Northwind Compute order for 20,000 A9 chips",
+  "url": "https://marketpulsedaily.example/markets/2026/10/30/aurora-northwind-a9-supply-deal",
+  "source": "Market Pulse Daily",
+  "published_at": "2026-10-30T12:45:00Z",
+  "author": "Staff and wire reports",
+  "text": "Aurora Silicon has signed a supply partnership with Northwind Compute under which the GPU cloud will deploy 20,000 of Aurora's A9 inference chips starting in mid-2027, the companies said on Friday, in a deal people familiar with it valued at about $350 million.\n\nIt is the largest disclosed order for the A9, which Aurora Silicon has been sampling with cloud providers since the summer. Northwind said it would offer A9-based instances specifically for serving trained models, alongside its existing GPU fleet.\n\n\"Customers are asking for a cheaper way to run models in production, and dedicated inference silicon is one answer,\" said Marcus Hale, Northwind's co-founder.\n\nThe deal gives Aurora a marquee customer weeks after it secured $410 million from investors, and it gives Northwind a way to diversify away from a single chip supplier after cutting list prices sharply this month.\n\nAnalysts cautioned that dedicated inference chips still have to prove they can match the software support of established GPUs. Aurora said its compiler supports the most widely used open-source model frameworks. Neither company disclosed what the new instances will cost.",
+  "synthetic": true
+}

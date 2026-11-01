@@ -1,0 +1,51 @@
+# marketbrief settings. Every key is optional; defaults live in
+# src/marketbrief/config.py. MB_* environment variables override this file.
+
+llm:
+  provider: auto            # auto | anthropic | offline
+  model: claude-opus-5-5
+  judge_model: claude-opus-5-5
+  effort:
+    extract: low
+    map_summary: low
+    reduce_brief: high
+    edit: medium
+    fact_check: medium
+    judge: high
+    agent_plan: medium
+  max_tokens: 16000
+  use_server_fallbacks: true
+  max_validation_retries: 2
+
+cache:
+  enabled: true
+  path: data/cache/llm_cache.sqlite
+  semantic_tasks: [map_summary]
+  semantic_threshold: 0.97
+
+embeddings:
+  backend: hashing          # hashing (offline, no downloads) | sentence-transformers
+  dim: 1024
+
+dedup:
+  threshold: 0.80
+
+retrieval:
+  index_dir: data/index
+  top_k: 6
+  min_score: 0.25
+  extra_brief_dirs: [data/fixtures/prior_briefs]
+
+pipeline:
+  default_topic: Enterprise AI infrastructure
+  max_articles: 80
+  max_workers: 4
+  reduce_batch_size: 20
+  min_support: 0.35
+  fact_check: true
+  require_review: true
+
+eval:
+  min_extraction_recall: 0.9
+  min_brief_recall: 0.75
+  min_judge_score: 3.5

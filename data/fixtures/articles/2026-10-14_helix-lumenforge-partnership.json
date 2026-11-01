@@ -1,0 +1,9 @@
+{
+  "title": "Helix Data Systems partners with LumenForge AI to embed LF-3 in its data platform",
+  "url": "https://cloudledger.example/articles/2026/10/14/helix-lumenforge-partnership",
+  "source": "Cloud Ledger",
+  "published_at": "2026-10-14T13:20:00Z",
+  "author": "Daniel Osei",
+  "text": "Helix Data Systems has signed a multi-year partnership with LumenForge AI to embed the LF-3 model directly in the Helix data platform, the two companies said on Wednesday.\n\nUnder the agreement, Helix customers will be able to query, summarise and classify data stored in Helix using LF-3 without moving it to an external service. The integration will be available in preview in December and generally available in early 2027.\n\nFinancial terms were not disclosed. Helix said it would offer LF-3 features at no extra charge during the preview and then bill by usage.\n\n\"Our customers have spent years consolidating their data in one governed place,\" said Ruth Adeyemi, Helix Data Systems' head of engineering. \"Sending it somewhere else to use AI defeats the purpose.\"\n\nThe deal gives LumenForge a distribution channel into several thousand enterprise data teams just two days after it unveiled LF-3 with an on-premises option. For Helix, which competes with larger data warehouse vendors that have built their own AI features, it fills a gap that customers had repeatedly flagged.\n\nBoth companies said they would jointly develop industry-specific templates, starting with financial services and healthcare.",
+  "synthetic": true
+}

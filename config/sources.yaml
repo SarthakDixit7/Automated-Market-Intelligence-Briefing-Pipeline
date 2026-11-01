@@ -1,0 +1,34 @@
+# Sources to ingest. kind: rss | json_dir | jsonl
+# The bundled synthetic feed is enabled so the pipeline runs offline.
+# Enable the RSS examples (or add your own) for live news.
+sources:
+  - id: demo_wire
+    name: Synthetic demo feed
+    kind: json_dir
+    path: data/fixtures/articles
+    category: ai-infrastructure
+    enabled: true
+
+  - id: techcrunch
+    name: TechCrunch
+    kind: rss
+    url: https://techcrunch.com/feed/
+    category: technology
+    enabled: false
+    max_items: 40
+
+  - id: hn_frontpage
+    name: Hacker News front page
+    kind: rss
+    url: https://hnrss.org/frontpage
+    category: technology
+    enabled: false
+    max_items: 30
+
+  - id: theregister_datacenter
+    name: The Register - Data Centre
+    kind: rss
+    url: https://www.theregister.com/data_centre/headlines.atom
+    category: ai-infrastructure
+    enabled: false
+    fetch_full_text: false
